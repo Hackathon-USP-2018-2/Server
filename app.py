@@ -1,4 +1,5 @@
 from flask import Flask, render_template
+from flask_cors import CORS
 
 import json
 import plotly
@@ -8,6 +9,7 @@ import numpy as np
 
 app = Flask(__name__)
 app.debug = True
+CORS(app)
 
 
 @app.route('/')
